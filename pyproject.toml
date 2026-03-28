@@ -1,0 +1,28 @@
+[project]
+name = "coffee-helper-cli"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "dotenv>=0.9.9",
+    "pyyaml>=6.0.3",
+    "rich>=14.3.3",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.0.2",
+    "ruff>=0.15.6",
+    "ty>=0.0.23",
+    "uv>=0.10.10",
+]
+
+[tool.ruff]
+src = ["src"]
+include = ["src/**/*.py"]
+
+[tool.pyright]
+extraPaths = ["src"]
+venvPath = "."
+venv = ".venv"
