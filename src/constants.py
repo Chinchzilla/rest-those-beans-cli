@@ -8,3 +8,5 @@ SRC: Path = PROJECT_ROOT_DIR.joinpath("src")
 CONFIG_DIR: Path = PROJECT_ROOT_DIR.joinpath("conf")
 
 LOGGER: str = "coffee_helper"
+
+EIGHTY_PERCENT: float = 80 / 100

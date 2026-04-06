@@ -1,8 +1,7 @@
 import logging
 
-# Setup logging and dotenv by importing only
-from .constants import LOGGER
-from .rich import get_panel, setup_console
+from src.cli import get_panel, setup_console
+from src.constants import LOGGER
 
 log = logging.getLogger(LOGGER)
 
@@ -10,7 +9,12 @@ log = logging.getLogger(LOGGER)
 def main():
 
     console = setup_console()
-    panel = get_panel(console, "Hello", "Hello from coffee-helper-cli!")
+    panel = get_panel(
+        title="Hello",
+        content="Hello from coffee-helper-cli!",
+        width=round(console.width * 0.70),
+        height=round(console.height * 0.90),
+    )
     console.print(panel)
 
 
