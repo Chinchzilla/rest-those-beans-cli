@@ -3,7 +3,7 @@ from rich.text import Text
 
 
 class TestMarkdown:
-    def test_makrdown(self, console, buffer):
+    def test_makrdown(self, console_scope_function, buffer_scope_function):
         markdown = """
 # Title
 ## Subtitle
@@ -20,6 +20,8 @@ _Lorem_ ipsum dolor sit amet, consectetur adipiscing **elit**, sed do eiusmod te
 1. Item 1
 2. Item 2
         """
+        console = console_scope_function
+        buffer = buffer_scope_function
         console.print(Markdown(markdown))
         captured: str = buffer.getvalue()
 
@@ -34,7 +36,7 @@ _Lorem_ ipsum dolor sit amet, consectetur adipiscing **elit**, sed do eiusmod te
         assert "\x1b[36m 1 \x1b[0mItem 1" in captured
         assert "\x1b[36m 2 \x1b[0mItem 2" in captured
 
-    def test_markdown_with_markup_colours(self, console, buffer):
+    def test_markdown_with_markup_colours(self, console_scope_function, buffer_scope_function):
         markdown = """
 # Title
 ## Subtitle
@@ -51,6 +53,8 @@ _Lorem_ ipsum dolor sit amet, consectetur adipiscing **elit**, sed do eiusmod te
 1. Item 1
 2. Item 2
         """
+        console = console_scope_function
+        buffer = buffer_scope_function
         console.print(Markdown(markdown))
         capture = buffer.getvalue()
         text = Text.from_ansi(capture)

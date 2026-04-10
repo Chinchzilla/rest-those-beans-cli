@@ -10,3 +10,5 @@ CONFIG_DIR: Path = PROJECT_ROOT_DIR.joinpath("conf")
 LOGGER: str = "coffee_helper"
 
 EIGHTY_PERCENT: float = 80 / 100
+MIN_CONSOLE_WIDTH: int = 90
+MIN_CONSOLE_HEIGHT: int = 30
