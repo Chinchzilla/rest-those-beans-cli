@@ -1,2 +1,2 @@
-# coffee-helper-cli
-Is your coffee gross? Espresso or Pour Over, this tool should help you make better cup!
+# rest-those-beans-cli
+This project should help you keep track of your beans! Know automatically if your beans are ready to drink or they need a bit of rest.
